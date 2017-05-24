@@ -26,12 +26,12 @@
     "type": "grafana",
     "id": "grafana",
     "name": "Grafana",
-    "version": "3.1.0"
+    "version": "4.2.0"
   }, {
     "type": "datasource",
     "id": "prometheus",
     "name": "Prometheus",
-    "version": "1.0.0"
+    "version": "1.6.1"
   }],
   "id": null,
   "title": "Prometheus Stats",
@@ -229,7 +229,7 @@
         "thresholdLabels": false
       }
     }, {
-      "content": "<img src=\"http://prometheus.io/assets/prometheus_logo_grey.svg\" alt=\"Prometheus logo\" style=\"height: 40px;\">\n<span style=\"font-family: 'Open Sans', 'Helvetica Neue', Helvetica; font-size: 25px;vertical-align: text-top;color: #bbbfc2;margin-left: 10px;\">Prometheus</span>\n\n<p style=\"margin-top: 10px;\">You're using Prometheus, an open-source systems monitoring and alerting toolkit originally built at SoundCloud. For more information, check out the <a href=\"http://www.grafana.org/\">Grafana</a> and <a href=\"http://prometheus.io/\">Prometheus</a> projects.</p>",
+      "content": "<img src=\"http://prometheus.io/assets/prometheus_logo_grey.svg\" alt=\"Prometheus logo\" style=\"height: 40px;\">\n<span style=\"font-family: 'Open Sans', 'Helvetica Neue', Helvetica; font-size: 25px;vertical-align: text-top;color: #bbbfc2;margin-left: 10px;\">Prometheus</span>\n\n<p style=\"margin-top: 10px;\">You're using Prometheus, an open-source systems prom-monitor and alerting toolkit originally built at SoundCloud. For more information, check out the <a href=\"http://www.grafana.org/\">Grafana</a> and <a href=\"http://prometheus.io/\">Prometheus</a> projects.</p>",
       "editable": true,
       "error": false,
       "id": 9,
@@ -249,7 +249,7 @@
     "panels": [{
       "aliasColors": {
         "prometheus": "#C15C17",
-        "{instance=\"localhost:9090\",job=\"prometheus\"}": "#C15C17"
+        "{instance=\"prometheus:9090\",job=\"prometheus\"}": "#C15C17"
       },
       "bars": false,
       "datasource": "${DS_PROMETHEUS}",
@@ -340,7 +340,7 @@
     "panels": [{
       "aliasColors": {
         "prometheus": "#F9BA8F",
-        "{instance=\"localhost:9090\",interval=\"5s\",job=\"prometheus\"}": "#F9BA8F"
+        "{instance=\"prometheus:9090\",interval=\"5s\",job=\"prometheus\"}": "#F9BA8F"
       },
       "bars": false,
       "datasource": "${DS_PROMETHEUS}",
