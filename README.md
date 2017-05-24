@@ -4,8 +4,7 @@
 
 To quickly start all the things just do this:
 ```bash
-kubectl apply \
-  --filename https://raw.githubusercontent.com/giantswarm/kubernetes-prometheus/master/manifests-all.yaml
+./deploy-prom.sh env-name
 ```
 
 This will create the namespace `monitoring` and bring up all components in there.
