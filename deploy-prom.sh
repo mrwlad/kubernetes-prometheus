@@ -29,3 +29,12 @@ echo "  namespace: monitoring" >>  /tmp/configmap-grafana-dashboard-tmp.yaml
 
 kubectl --namespace monitoring apply -f /tmp/configmap-grafana-dashboard-tmp.yaml
 kubectl --namespace monitoring create configmap prometheus-core --from-file=configs/prometheus
+kubectl --namespace monitoring create configmap cloudwatch-exporter --from-file=configs/cloudwatch-exporter
+
+## Create a configmap file
+#kubectl --namespace prom-monitor create configmap --dry-run cloudwatch-exporter \
+#  --from-file=configs/cloudwatch-exporter \
+#  --output yaml \
+#  > ./manifests/prometheus/cloudwatch-exporter/configmap.yaml
+#
+#  echo "  namespace: prom-monitor" >> manifests/prometheus/cloudwatch-exporter/configmap.yaml
